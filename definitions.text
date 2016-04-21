@@ -1,0 +1,106 @@
+What is the difference between undefined and not defined in JavaScript?
+In JavaScript, if you try to use a variable that doesn't exist and has not been declared, then JavaScript will throw an error var name is not defined and script will stop executing. However, if you use typeof undeclared_variable, then it will return undefined.
+
+
+What is the drawback of creating true private methods in JavaScript?
+One of the drawbacks of creating true private methods in JavaScript is that they are very memory-inefficient, as a new copy of the method would be created for each instance.
+
+
+What is a “closure” in JavaScript?
+A closure is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope.
+The closure has access to variables in three scopes:
+
+    Variables declared in their own scope
+    Variables declared in a parent function scope
+    Variables declared in the global namespace
+    
+    
+What is closure?
+Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope.
+
+    
+
+How to define a anonymous function?
+An anonymous function can be defined in similar way as a normal function but it would not have any name.
+
+
+Can you assign a anonymous function to a variable?
+Yes! An anonymous function can be assigned to a variable.
+
+
+What is a named function in JavaScript? How to define a named function?  
+A named function has a name when it is defined. A named function can be defined using function keyword as follows −
+function named(){
+   // do some stuff here
+}
+
+
+What is the purpose of 'this' operator in JavaScript?
+JavaScript famous keyword this always refers to the current context.
+
+
+What are the valid scopes of a variable in JavaScript?
+The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes.
+Global Variables − A global variable has global scope which means it is visible everywhere in your JavaScript code.
+Local Variables − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.
+
+
+Which type of variable among global and local, takes precedence over other if names are same?
+A local variable takes precedence over a global variable with the same name.
+
+What do mean by NULL in Javascript?
+The NULL value is used to represent no value or no object.  It implies no object or null string, no valid boolean value, no number and no array object.
+
+What is the data type of variables of in JavaScript?
+All variables in the JavaScript are object data types.
+
+What are JavaScript types?
+Following are the JavaScript types:
+    Number
+    String
+    Boolean
+    Function
+    Object
+    Null
+    Undefined
+
+What are the two basic groups of dataypes in JavaScript?
+They are as –
+    Primitive
+    Reference types.
+Primitive types are number and Boolean data types. Reference types are more complex types like strings and dates.
+
+
+What are the different types of errors in JavaScript?
+There are three types of errors:
+Load time errors: Errors which come up when loading a web page like improper syntax errors are known as Load time errors and it generates the errors dynamically.
+Run time errors: Errors that come due to misuse of the command inside the HTML language.
+Logical Errors: These are the errors that occur due to the bad logic performed on a function which is having different operation.
+
+
+What is the use of Push method in JavaScript?
+The push method is used to add or append one or more elements to the end of an Array. Using this method, we can append multiple elements by passing multiple arguments
+
+Explain what is pop() method in JavaScript?
+The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array.  Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.
+Example:
+var cloths = [“Shirt”, “Pant”, “TShirt”];
+cloths.pop();
+//Now cloth becomes Shirt,Pant
+
+
+How are object properties assigned?
+Properties are assigned to objects in the following way –
+obj["class"] = 12;
+or
+obj.class = 12;
+
+
+Define event bubbling?
+JavaScript allows DOM elements to be nested inside each other. In such a case, if the handler of the child is clicked, the handler of parent will also work as if it were clicked too.
+
+
+
+
+
+
