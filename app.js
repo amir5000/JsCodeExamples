@@ -1,5 +1,19 @@
 "use strict";
 
+// Important Definitions
+// Syntax Parser: A program that reads your code and determins what it does and if its grammer is valid.
+// Lexical Enviroment: Where something sits physically in the code you write.
+// Execution Context: A wrapper to help manage the code that is currently running.
+// Creation Phase: when is sets up memory space for variable and function which is called "Hoisting".
+// Execution Phase: when it executed the code line by line how it was written.
+// Name/Value Pairs: A name which maps to a unique value.
+// Object: a collection of name/value pairs.
+
+//global variable
+
+var v = 'Global variable';
+console.log(window.v);
+
 // function clousure example
 // without a clousure
 function buildFunctions() {
@@ -38,7 +52,7 @@ fs[0]();
 fs[1]();
 fs[2]();
 
-//function factory example
+// function factory example
 
 function makeGreeting(lang) {
     return function (firstname, lastname) {
