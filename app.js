@@ -1,7 +1,7 @@
 "use strict";
 
 // function clousure example
-
+// without a clousure
 function buildFunctions() {
     var arr = [];
     for (var i = 0; i < 3; i++) {
@@ -18,6 +18,7 @@ fs[0]();
 fs[1]();
 fs[2]();
 
+// with a clousure now and then the code works now as expected.
 function buildFunctions1() {
     var arr = [];
     for (var i = 0; i < 3; i++) {
