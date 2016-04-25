@@ -8,6 +8,8 @@
 // Execution Phase: when it executed the code line by line how it was written.
 // Name/Value Pairs: A name which maps to a unique value.
 // Object: a collection of name/value pairs.
+// Single Threaded Behavior: One command at a time.
+// Synchronous Execution: One at a time.
 
 //global variable
 
