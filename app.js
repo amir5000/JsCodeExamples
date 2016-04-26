@@ -26,6 +26,7 @@
 // By Reference: values set to an Objects will point to the same address in memory.
 // Mutate: to change something.
 // Immutable: means it can't be changed.
+// Argumanets: The parameters you pass to a function.
 
 //global variable
 
@@ -64,6 +65,17 @@ var c = {
 c.log();
 
 // function clousure example
+function greets(hi) {
+    return function(name) {
+        console.log(hi + ' ' + name);
+    }
+}
+
+greets('Hello')('Amir');
+var sayHi = greets('Hola');
+sayHi('Jose');
+
+
 // without a clousure
 function buildFunctions() {
     var arr = [];
@@ -102,7 +114,6 @@ fs[1]();
 fs[2]();
 
 // function factory example
-
 function makeGreeting(lang) {
     return function (firstname, lastname) {
         if (lang === 'en') {
@@ -122,7 +133,6 @@ greetSpanish('Amir', 'Arafat');
 
 
 // closures and callbacks
-
 function sayHiLater() {
     var greeting = 'Hi!';
     
@@ -135,7 +145,7 @@ sayHiLater();
 
 function callBackExample(callback) {
     var l = 0;
-    var t = "afew";
+    var t = "Some String";
     
     callback(l, t);
 }
@@ -160,7 +170,7 @@ var person = {
 var logName = function(lang1, lang2) {    
     console.log('Logged: ' + this.getFullName());
     console.log('Arguments: ' + lang1 + ' ' + lang2);
-    console.log('-------------------');
+    console.log('-------------------------------------------');
 };
 var logPersonName = logName.bind(person);
 logPersonName('en', 'es');
@@ -170,14 +180,14 @@ logName.apply(person, ['en', 'es']);
 (function(lang1, lang2) {    
     console.log('Logged: ' + this.getFullName());
     console.log('Arguments: ' + lang1 + ' ' + lang2);
-    console.log('-------------------');
+    console.log('********************************');
 }).apply(person, ['Ar', 'es']);
 
 // function borrowing
 
 var person2 = {
-    firstname: 'Amir',
-    lastname: 'Arafat'
+    firstname: 'John',
+    lastname: 'Doe'
 }
 
 console.log(person.getFullName.apply(person2));
@@ -193,7 +203,6 @@ console.log(multiplyByTwo(10));
 
 
 // Functional Programming
-
 function mapForEach(arr, fn) {
     var newArr = [];
     for (var i = 0; i < arr.length; i++) {
