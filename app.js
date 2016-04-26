@@ -22,6 +22,10 @@
 // Namespace: A container/holder for variables and functions.
 // First Class Functions: Everything you can do with other types you can do with functions.
 // Expression: A unit of code that results in a value.
+// By value: Copy of a value and pasing it to it.
+// By Reference: values set to an Objects will point to the same address in memory.
+// Mutate: to change something.
+// Immutable: means it can't be changed.
 
 //global variable
 
@@ -41,6 +45,23 @@ var c1 = 1 + '00';
 console.log(c1);
 
 console.log(3 < 2 < 1); // the < associotivity is left to right and gets performed on operator at a time. 
+
+// The 'this' variable example
+
+var c = {
+    name: 'Amir',
+    log: function() {
+        this.name = 'changed name';
+        console.log(this);
+        
+        var changeName = function(newName) {
+            this.name = 'changed name again';
+        }.call(this); // call invoces the function and keeps the current context by passing the this variable in to the function.
+        
+    }
+}
+
+c.log();
 
 // function clousure example
 // without a clousure
