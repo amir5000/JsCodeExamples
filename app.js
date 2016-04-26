@@ -9,12 +9,35 @@
 // Name/Value Pairs: A name which maps to a unique value.
 // Object: a collection of name/value pairs.
 // Single Threaded Behavior: One command at a time.
-// Synchronous Execution: One at a time.
+// Synchronous Execution: One line at a time.
+// Function Invocation: Running a function is invocing a function.
+// variable Enviorment: Where the variables live.
+// Scope: Where a variable is available in your code.
+// Asynchronous: More than one at a time.
+// Dynamic Typing: You dont tell the engine what type of data a variable holds, if figures it out while your code is running.
+// Primitive Type: A type of Data that represents a single value.
+// Operator Precedence: which operator function gets called first.
+// Operator Associativity: what order operator functions get called in: left-to-right or right-to-left.
+// Coercion: Converting a value from one type to another.
 
 //global variable
 
 var v = 'Global variable';
 console.log(window.v);
+
+// Associotivity Examnple
+var a1 = 2, a2 = 3, a3 = 4;
+
+a1 = a2 = a3;
+console.log(a1);
+console.log(a2);
+console.log(a3); // all are the same value, and since = operator's associotivity is right to left the result is then explained.
+
+// Coercion Example
+var c1 = 1 + '00';
+console.log(c1);
+
+console.log(3 < 2 < 1); // the < associotivity is left to right and gets performed on operator at a time. 
 
 // function clousure example
 // without a clousure
