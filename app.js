@@ -19,6 +19,9 @@
 // Operator Precedence: which operator function gets called first.
 // Operator Associativity: what order operator functions get called in: left-to-right or right-to-left.
 // Coercion: Converting a value from one type to another.
+// Namespace: A container/holder for variables and functions.
+// First Class Functions: Everything you can do with other types you can do with functions.
+// Expression: A unit of code that results in a value.
 
 //global variable
 
@@ -381,9 +384,6 @@ console.log(typeof null); // a bug since, forever...
 
 var z = function() { };
 console.log(typeof z);
-
-
-
 
 
 
