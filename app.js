@@ -27,9 +27,11 @@
 // Mutate: to change something.
 // Immutable: means it can't be changed.
 // Argumanets: The parameters you pass to a function.
+// Inheritance: One object gets access to the properties and methods of another object.
+// Reflection: An object can look at iself, listing and changing its properties and methods.
+// Function constructor: A normal function used to construct object, which creates a new this variable tht points to the new object.
 
-//global variable
-
+// global variable
 var v = 'Global variable';
 console.log(window.v);
 
@@ -46,6 +48,14 @@ var c1 = 1 + '00';
 console.log(c1);
 
 console.log(3 < 2 < 1); // the < associotivity is left to right and gets performed on operator at a time. 
+
+// Hoisting tricky example
+ var salary = "1000$";
+ (function () {
+     console.log("Original salary was " + salary);
+     var salary = "5000$";
+     console.log("My New Salary " + salary);
+ })();
 
 // The 'this' variable example
 
@@ -250,7 +260,6 @@ var arr7 = _.filter([1,2,3,4,5,6,7,8,9,10,11,12,13,14], function(item){ return i
 console.log(arr7);
 
 // Prototypal Inheritance
-
 var contact = {
     firstname: 'default',
     lastname: 'default',
@@ -265,9 +274,10 @@ var john = {
 }
 
 john.__proto__ = contact; // this is bad practice but shows the prototype object and how we can add to it.
+console.log(john.getFullName());
 
 for (var prop in john) {
-    if (john.hasOwnProperty(prop)){
+    if (john.hasOwnProperty(prop)){ // hasOwnProperty will only return the object props not the prototype ones as well.
         console.log(prop + ': ' + john[prop]);
     }
 }
@@ -290,20 +300,18 @@ _.extend(john, jane, jim);
 console.log(john);
 
 // Building Objects and Function constructors and 'new'.
-
-//Function constructor: A normal function used to construct object, which creates a new this variable tht points to the new object.
 // Use Capital name when using function constructors to know that you need to use the new key word.
-function Animal(name1, name2) {
+function Animals(name1, name2) {
     this.dog = name1;
     this.cat = name2;        
 }
 
-Animal.prototype.getAllPets = function() {
+Animals.prototype.getAllPets = function() {
     return this.dog + ', ' + this.cat;
 }
 
-var pets = new Animal('sam', 'buttons'); // changes the execution context to a new object and then this changes to the object not the window.
-var pets2 = new Animal('bingo', 'spider'); 
+var pets = new Animals('sam', 'buttons'); // changes the execution context to a new object and then this changes to the object not the window.
+var pets2 = new Animals('bingo', 'spider'); 
 console.log(pets);
 console.log(pets2);
 
@@ -318,11 +326,21 @@ var fc3 = new Date('1/1/1992');
 console.log(fc1, fc2, fc3);
 
 // adding additional feature to the string Function Constructor but bad for comparisons and math.
-String.prototype.isLengthGreaterThan = function(limit) {
+String.prototype.isLengthGreaterThan = String.prototype.isLengthGreaterThan || function(limit) {
     return this.length > limit;
 }
 
-console.log("John".isLengthGreaterThan(3));
+String.prototype.repeatify = String.prototype.repeatify || function(times) {
+    var str = "";
+    for (var i = 0; i < times; i++) {
+        str += this;
+    }
+    
+    return str;
+}
+
+console.log("John Doe".isLengthGreaterThan(30));
+console.log("Hello".repeatify(3));
 
 //Arrays and for in don't use together instead use for loop.
 Array.prototype.myCustomFeature = 'cool!'
@@ -370,7 +388,6 @@ meal.drink = "Sprite";
 console.log(meal);
 
 // ES6 Class and how it creates Objects
-
 class Weekend {
     constructor(day1, day2) {
         this.day1 = day1;
