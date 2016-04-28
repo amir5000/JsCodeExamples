@@ -58,7 +58,6 @@ console.log(3 < 2 < 1); // the < associotivity is left to right and gets perform
  })();
 
 // The 'this' variable example
-
 var c = {
     name: 'Amir',
     log: function() {
@@ -165,7 +164,6 @@ callBackExample(function(l, t) {
 });
 
 //Apply, Call, Bind examples
-
 var person = {
     firstname: 'Amir',
     lastname: 'Arafat',
@@ -194,7 +192,6 @@ logName.apply(person, ['en', 'es']);
 }).apply(person, ['Ar', 'es']);
 
 // function borrowing
-
 var person2 = {
     firstname: 'John',
     lastname: 'Doe'
@@ -203,7 +200,6 @@ var person2 = {
 console.log(person.getFullName.apply(person2));
 
 // function currying
-
 function multiply(a, b) {
     return a * b;
 }
@@ -252,7 +248,6 @@ var arr5 = mapForEach(arr1, checkPastLimitSimple(3));
 console.log(arr5);
 
 //Underscore example of functional programming
-
 var arr6 = _.map(arr1, function(item){ return item * 3 });
 console.log(arr6);
 
@@ -319,7 +314,6 @@ console.log(pets2);
 // instead of having it coppied everywhere the object gets created.
 
 //Built in function constructors in JS
-
 var fc1 = new Number(5);
 var fc2 = new String("test");
 var fc3 = new Date('1/1/1992');
@@ -352,7 +346,6 @@ for (var prop in arr) {
 
 // Pure prototypal inheritance and Object.create in modern browsers ie9+, ff4.0+, Chrome & Safari 5+
 //Object.create Pollyfill
-
 if (typeof Object.create != 'function') {
   Object.create = (function() {
     var Temp = function() {};
