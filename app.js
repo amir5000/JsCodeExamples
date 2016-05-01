@@ -67,7 +67,6 @@ var c = {
         var changeName = function(newName) {
             this.name = 'changed name again';
         }.call(this); // call invoces the function and keeps the current context by passing the this variable in to the function.
-        
     }
 }
 
