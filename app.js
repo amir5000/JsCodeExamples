@@ -50,10 +50,10 @@ console.log(c1);
 console.log(3 < 2 < 1); // the < associotivity is left to right and gets performed on operator at a time. 
 
 // Hoisting tricky example
- var salary = "1000$";
+ var salary = "$1000";
  (function () {
      console.log("Original salary was " + salary);
-     var salary = "5000$";
+     var salary = "$5000";
      console.log("My New Salary " + salary);
  })();
 
