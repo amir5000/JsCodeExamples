@@ -111,7 +111,7 @@ function buildFunctions1() {
                 return function() {
                     console.log(j);
                 }
-            }(i));
+            }(i))
         );
     }
     return arr;
@@ -188,7 +188,7 @@ logName.apply(person, ['en', 'es']);
 (function(lang1, lang2) {    
     console.log('Logged: ' + this.getFullName());
     console.log('Arguments: ' + lang1 + ' ' + lang2);
-    console.log('********************************');
+    console.log('-------------------------------------------');
 }).apply(person, ['Ar', 'es']);
 
 // function borrowing
@@ -232,6 +232,7 @@ var arr3 = mapForEach(arr1, function(item) {
 console.log(arr3);
 
 var checkPastLimit = function(limiter, item) {
+    console.log(limiter, item);
     return item > limiter;
 }
 
@@ -244,7 +245,7 @@ var checkPastLimitSimple = function(limiter) {
     }.bind(this, limiter);
 }
 
-var arr5 = mapForEach(arr1, checkPastLimitSimple(3));
+var arr5 = mapForEach(arr1, checkPastLimitSimple(2));
 console.log(arr5);
 
 //Underscore example of functional programming
