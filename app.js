@@ -93,6 +93,7 @@ function buildFunctions() {
             }
         );
     }
+    console.log(arr);
     return arr;
 }
 
@@ -110,7 +111,7 @@ function buildFunctions1() {
                 return function() {
                     console.log(j);
                 }
-            }(i))
+            }(i));
         );
     }
     return arr;
