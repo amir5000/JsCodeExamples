@@ -47,7 +47,7 @@ console.log(a3); // all are the same value, and since = operator's associotivity
 var c1 = 1 + '00';
 console.log(c1);
 
-console.log(3 < 2 < 1); // the < associotivity is left to right and gets performed on operator at a time. 
+console.log(3 < 2 < 1); // the < associotivity is left to right and gets performed one operator at a time. 
 
 // Hoisting tricky example
  var salary = "$1000";
