@@ -310,6 +310,8 @@ var pets = new Animals('sam', 'buttons'); // changes the execution context to a 
 var pets2 = new Animals('bingo', 'spider'); 
 console.log(pets);
 console.log(pets2);
+console.log(pets.getAllPets());
+console.log(pets2.getAllPets());
 
 // Using prototypes instead of including functions directly in the function constructor saves lots of space because it creates the function or method once 
 // instead of having it coppied everywhere the object gets created.
@@ -317,7 +319,7 @@ console.log(pets2);
 //Built in function constructors in JS
 var fc1 = new Number(5);
 var fc2 = new String("test");
-var fc3 = new Date('1/1/1992');
+var fc3 = new Date('12/10/1987');
 console.log(fc1, fc2, fc3);
 
 // adding additional feature to the string Function Constructor but bad for comparisons and math.
